@@ -1,6 +1,6 @@
 Style FLASHES
 -
-Hi my name is  and this is my first mod...
+Hi my name is tsoh otherwise known as jeivc and this is my first mod...
 Essentially what this mod does is display an image and play a sound when you get certain style bonuses. What style bonuses trigger what images and sounds are entirely customisable!
 
 Note that this "flash" is independent from the usual parry flash, as to work with other mods like AnyParry.
@@ -105,11 +105,11 @@ I wouldn't recommend using ultrakill.nailhit, ultrakill.shotgunhit or any sort o
 
 If you do not see the bonus you're looking for, it's likely just the bonus verbatim. For example, +PANCAKED isn't "ultrakill.pancaked" in the code but rather just "PANCAKED". If these types of bonuses have colour, use these:
 
-- Orange bonuses = @OrangeTEXT#
-- Green bonuses = @GreenTEXT#
-- Cyan bonuses = @CyanTEXT#
-- Red bonuses = @RedTEXT#
-- Grey bonuses = @GreyTEXT#
+- Orange bonuses = \_OrangeTEXT\_e
+- Green bonuses = \_GreenTEXT\_e
+- Cyan bonuses = \_CyanTEXT\_e
+- Red bonuses = \_RedTEXT\_e
+- Grey bonuses = \_GreyTEXT\_e
 
 (These are case-sensitive.)
 
