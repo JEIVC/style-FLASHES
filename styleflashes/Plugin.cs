@@ -34,7 +34,7 @@ public class Plugin : BaseUnityPlugin
             AudioClip clip = audioPool.Where(obj => obj.name == bonus).SingleOrDefault();
             if (temp == null && clip == null) return;
 
-            MonoSingleton<TimeController>.Instance.HitStop(0.1f);
+            // MonoSingleton<TimeController>.Instance.HitStop(0.1f);
 
             
 
@@ -133,3 +133,4 @@ public class Plugin : BaseUnityPlugin
         }
     }
 }
+
