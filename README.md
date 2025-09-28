@@ -118,3 +118,5 @@ If you do not see the bonus you're looking for, it's likely just the bonus verba
 (These are PROBABLY not case-sensitive but like just in case)
 
 You may use these for styles like, +STOP HITTING YOURSELF, +CONDUCTOR, bonuses with dead variants, or mods that implement new style bonuses (things like Masquerade Divinity and Straymode).
+
+Note that if you have mods that edit existing style names, you need to reflect that in your file names (of course, if these style bonuses do not have IDs).
