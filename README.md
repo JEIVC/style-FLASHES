@@ -113,6 +113,6 @@ If you do not see the bonus you're looking for, it's likely just the bonus verba
 - Red bonuses = \_RedTEXT\_e
 - Grey bonuses = \_GreyTEXT\_e
 
-(These are case-sensitive.)
+(These are PROBABLY not case-sensitive but like just in case)
 
 You may use these for styles like, +STOP HITTING YOURSELF, +CONDUCTOR, bonuses with dead variants, or mods that implement new style bonuses (things like Masquerade Divinity and Straymode).
