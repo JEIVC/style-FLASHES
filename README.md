@@ -5,6 +5,8 @@ Essentially what this mod does is display an image and play a sound when you get
 
 Note that this "flash" is independent from the usual parry flash, as to work with other mods like AnyParry.
 
+Credits too to that mod for some code snippets, and to random reddit users for some of the images.
+
 Now, here's a probably not nuanced guide on how to use this mod.
 
 The "assets" folder contains all of the images and audio used. There's already some in there, and you can glean what they're used for from the names. These are displayed/played when their respective style bonus is triggered.
