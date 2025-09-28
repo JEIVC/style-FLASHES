@@ -24,6 +24,7 @@ public class Plugin : BaseUnityPlugin
         {
             var bonus = pointID.Replace("<color=orange>", "_Orange", StringComparison.OrdinalIgnoreCase)
             .Replace("<color=#00ffffff>", "_Cyan", StringComparison.OrdinalIgnoreCase)
+            .Replace("<color=#00FFFF>", "_Cyan", StringComparison.OrdinalIgnoreCase)
             .Replace("<color=red>", "_Red", StringComparison.OrdinalIgnoreCase)
             .Replace("<color=green>", "_Green", StringComparison.OrdinalIgnoreCase)
             .Replace("<color=grey>", "_Grey", StringComparison.OrdinalIgnoreCase)
@@ -133,4 +134,5 @@ public class Plugin : BaseUnityPlugin
         }
     }
 }
+
 
