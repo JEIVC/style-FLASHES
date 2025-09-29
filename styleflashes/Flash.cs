@@ -1,22 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Linq;
-using BepInEx;
-using BepInEx.Logging;
-using HarmonyLib;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using DG.Tweening;
-using System.Security.Cryptography.X509Certificates;
+using PluginConfig.API;
+using PluginConfig.API.Fields;
 
 namespace styleFLASHES;
 public class Flash : MonoBehaviour
 {
     public YieldInstruction fadeInstruction = new();
-    public IEnumerator FadeOut(Image image, float fadeTime)
+    public IEnumerator FadeOut(Image image, float fadeTime, float startingAlpha)
     {
         float elapsedTime = 0.0f;
         Color c = image.color;
@@ -24,7 +16,7 @@ public class Flash : MonoBehaviour
         {
             yield return fadeInstruction;
             elapsedTime += Time.deltaTime;
-            c.a = 1.0f - Mathf.Clamp01(elapsedTime / fadeTime);
+            c.a = (1.0f - Mathf.Clamp01(elapsedTime / fadeTime)) * startingAlpha;
             image.color = c;
         }
     }
@@ -48,6 +40,6 @@ public class Flash : MonoBehaviour
     public void fade()
     {
         gameObject.GetComponent<AudioSource>().Play();
-        StartCoroutine(FadeOut(gameObject.GetComponent<Image>(), 1f));
+        StartCoroutine(FadeOut(gameObject.GetComponent<Image>(), SFConfig.fadeTime.value, SFConfig.imageAlpha.value));
     }
 }

@@ -10,6 +10,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Drawing;
+using PluginConfig.API;
+using PluginConfig.API.Fields;
 
 namespace styleFLASHES;
 
@@ -47,10 +49,11 @@ public class Plugin : BaseUnityPlugin
             {
                 Logger.LogInfo("Playing audio for style: " + clip.name);
                 flashObj.GetComponent<AudioSource>().clip = clip;
+                flashObj.GetComponent<AudioSource>().volume = SFConfig.audioVolume.value;
             }
             flashObj.transform.SetParent(MonoSingleton<SFGroup>.Instance.group.transform, false);
             Flash flash = flashObj.AddComponent<Flash>();
-
+    
             flash.fade();
             // executor.StartCoroutine(executor.FadeOut(img, 0.5f));
         }
@@ -71,6 +74,9 @@ public class Plugin : BaseUnityPlugin
         // Plugin startup logic
         Logger = base.Logger;
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
+
+        SFConfig.Init();
+        Logger.LogInfo("Also loaded my config menu.");
     }
 
     public void Start()
@@ -134,5 +140,3 @@ public class Plugin : BaseUnityPlugin
         }
     }
 }
-
-
